@@ -216,21 +216,21 @@ def main():
     # Basic inputs
     currency = st.sidebar.text_input("Currency Symbol", value="$")
     house_price = st.sidebar.number_input(f"House Structure Price / Loan Amount ({currency})", value=300000, step=10000)
-    loan_interest = st.sidebar.number_input("Loan Interest Rate (%)", value=4.0, step=0.1)
+    loan_interest = st.sidebar.number_input("Loan Interest Rate (%)", value=7.0, step=0.1)
     loan_term = st.sidebar.number_input("Loan Term (years)", value=30, step=1)
-    monthly_rent = st.sidebar.number_input(f"Initial Monthly Rental Income ({currency})", value=1500, step=50)
-    rental_increase = st.sidebar.number_input("Annual Rental Increase (%)", value=3.0, step=0.1)
+    monthly_rent = st.sidebar.number_input(f"Initial Monthly Rental Income ({currency})", value=20000, step=50)
+    rental_increase = st.sidebar.number_input("Annual Rental Increase (%)", value=10.0, step=0.1)
     house_depreciation_rate = st.sidebar.number_input("House Structure Depreciation Rate (%) per year", value=1.0, step=0.1)
     
     st.sidebar.subheader("Land Details")
-    land_area = st.sidebar.number_input("Land Area (sq ft)", value=2000, step=100)
-    land_price_per_sqft = st.sidebar.number_input(f"Current Land Price per Sq Ft ({currency})", value=50, step=1)
-    land_growth_rate = st.sidebar.number_input("Annual Land Growth Rate (%)", value=3.0, step=0.1)
+    land_area = st.sidebar.number_input("Land Area (sq ft)", value=1000, step=1)
+    land_price_per_sqft = st.sidebar.number_input(f"Current Land Price per Sq Ft ({currency})", value=5000, step=1)
+    land_growth_rate = st.sidebar.number_input("Annual Land Growth Rate (%)", value=8.0, step=0.1)
     
     st.sidebar.subheader("Alternative Investment & Inflation")
     alternative_return = st.sidebar.number_input("Alternative Investment Return Rate (%)", value=5.0, step=0.1)
     inflation_rate = st.sidebar.number_input("Inflation Rate (%)", value=2.0, step=0.1)
-    discount_rate = st.sidebar.number_input("Discount Rate for NPV Calculation (%)", value=5.0, step=0.1)
+    discount_rate = st.sidebar.number_input("Discount Rate for NPV Calculation (%)", value=7.0, step=0.1)
     
     # Advanced parameters hidden behind an expander (all default to 0)
     with st.sidebar.expander("Advanced Options (default = 0)"):
